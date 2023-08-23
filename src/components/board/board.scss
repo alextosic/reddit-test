@@ -1,0 +1,9 @@
+.board {
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
+
+    .board-row {
+        display: flex;
+    }
+}
