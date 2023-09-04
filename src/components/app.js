@@ -23,10 +23,6 @@ function App() {
         if (shipSunk) {
             alert('Ship sunk!');
         }
-
-        if (isGameOver) {
-            alert('Game Over!');
-        }
     };
 
     return (
