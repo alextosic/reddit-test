@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import Tile from '../tile/tile';
 import './board.scss';
 
+import { generateBoard } from '../../utils/boardGenerator';
+
 function Board({ width, height, shipLayout, isGameOver, onMove }) {
     const [playableBoard, setPlayableBoard] = useState([]);
     const [shipStatus, setShipStatus] = useState({});
@@ -19,7 +21,10 @@ function Board({ width, height, shipLayout, isGameOver, onMove }) {
             }
         }
 
-        shipLayout.layout.forEach((singleShipLayout) => {
+        const layout = generateBoard(width, height, shipLayout.shipTypes);
+        console.log(layout);
+
+        layout.forEach((singleShipLayout) => {
            shipStatusCopy[singleShipLayout.ship] = {
                size: shipLayout.shipTypes[singleShipLayout.ship].size,
                hits: [],

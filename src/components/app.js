@@ -31,7 +31,7 @@ function App() {
 
     return (
         <div>
-            <Board width={11} height={10} shipLayout={shipLayout} onMove={onBoardMove} isGameOver={isGameOver} />
+            <Board width={10} height={10} shipLayout={shipLayout} onMove={onBoardMove} isGameOver={isGameOver} />
             {!isGameOver ? (
                 <p>Latest move: {latestMove}</p>
             ) : (
